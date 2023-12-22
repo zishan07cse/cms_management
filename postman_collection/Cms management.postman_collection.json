@@ -1,0 +1,745 @@
+{
+	"info": {
+		"_postman_id": "ad62a9da-85ab-422f-b6bf-3a75a97041bb",
+		"name": "Cms management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1756868"
+	},
+	"item": [
+		{
+			"name": "Retrieve a list of all articles.",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDMyNTU1NDksImV4cCI6MTcwMzI1OTE0OSwibmJmIjoxNzAzMjU1NTQ5LCJqdGkiOiJ4MklSUWFtYlJ1YXVIT09rIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.yQUfV7_5Mu_o6zC1vxYdN6YVTwg43LLlfg4gBbEk2SQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "37",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "order_id",
+							"value": "867",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "total_commission",
+							"value": "200",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blog/all_articles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blog",
+						"all_articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve a list of all articles for authenticated users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDMyNTU1NDksImV4cCI6MTcwMzI1OTE0OSwibmJmIjoxNzAzMjU1NTQ5LCJqdGkiOiJ4MklSUWFtYlJ1YXVIT09rIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.yQUfV7_5Mu_o6zC1vxYdN6YVTwg43LLlfg4gBbEk2SQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "37",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "order_id",
+							"value": "867",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "total_commission",
+							"value": "200",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blog/all_articles_by_author/han",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blog",
+						"all_articles_by_author",
+						"han"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve a list of all articles for a category",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDMyNTU1NDksImV4cCI6MTcwMzI1OTE0OSwibmJmIjoxNzAzMjU1NTQ5LCJqdGkiOiJ4MklSUWFtYlJ1YXVIT09rIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.yQUfV7_5Mu_o6zC1vxYdN6YVTwg43LLlfg4gBbEk2SQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "37",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "order_id",
+							"value": "867",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "total_commission",
+							"value": "200",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "_method",
+							"value": "DELETE",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blog/get_article_by_category/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blog",
+						"get_article_by_category",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new article",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDMyNTU1NDksImV4cCI6MTcwMzI1OTE0OSwibmJmIjoxNzAzMjU1NTQ5LCJqdGkiOiJ4MklSUWFtYlJ1YXVIT09rIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.yQUfV7_5Mu_o6zC1vxYdN6YVTwg43LLlfg4gBbEk2SQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Hacking 1",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "loream ipsum chat gpt is a new technology which is lorem ipsum so it is a ",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "Han",
+							"type": "text"
+						},
+						{
+							"key": "slug",
+							"value": "Hacking",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blog/create_article",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blog",
+						"create_article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an article.",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDMxODQ2NzIsImV4cCI6MTcwMzE4ODI3MiwibmJmIjoxNzAzMTg0NjcyLCJqdGkiOiIyRGt5RFVtZWtJSnpmRWY1Iiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.o88hc-XJZ-w30o4viq47tFn1sTlp5lrduhhH-rr6e5g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "chatgpt",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "loream ipsum chat gpt is a new technology which is lorem ipsum so it is a ",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "Sumon",
+							"type": "text"
+						},
+						{
+							"key": "slug",
+							"value": "chatgpt",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blog/delete_article/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blog",
+						"delete_article",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an existing article",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDMyNTU1NDksImV4cCI6MTcwMzI1OTE0OSwibmJmIjoxNzAzMjU1NTQ5LCJqdGkiOiJ4MklSUWFtYlJ1YXVIT09rIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.yQUfV7_5Mu_o6zC1vxYdN6YVTwg43LLlfg4gBbEk2SQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "chatgpt1",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "loream ipsum chat gpt is most importan",
+							"type": "text"
+						},
+						{
+							"key": "slug",
+							"value": "chatgpt1",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "author",
+							"value": "Sumon",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blog/update_article/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blog",
+						"update_article",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve a single article by its slug",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "jwt",
+					"jwt": [
+						{
+							"key": "algorithm",
+							"value": "HS256",
+							"type": "string"
+						},
+						{
+							"key": "isSecretBase64Encoded",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "payload",
+							"value": "{}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "queryParamKey",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "header",
+							"value": "{}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDMxODQ2NzIsImV4cCI6MTcwMzE4ODI3MiwibmJmIjoxNzAzMTg0NjcyLCJqdGkiOiIyRGt5RFVtZWtJSnpmRWY1Iiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.o88hc-XJZ-w30o4viq47tFn1sTlp5lrduhhH-rr6e5g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "order_id",
+							"value": "867",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "commission",
+							"value": "300",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "sumon",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "sumon@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blog/get_article/hacking",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blog",
+						"get_article",
+						"hacking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Han",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "han@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Han",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "han@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDMxNjc5NDcsImV4cCI6MTcwMzE3MTU0NywibmJmIjoxNzAzMTY3OTQ3LCJqdGkiOiJzWEVrV3VsY0xtS0c4eEREIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.-a4Lp0zFml8MGTcmCyjfK4TDlT_lF8htT3Bf5xGTkPI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Han",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "han@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/user-profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"user-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MDMxNjc5NDcsImV4cCI6MTcwMzE3MTU0NywibmJmIjoxNzAzMTY3OTQ3LCJqdGkiOiJzWEVrV3VsY0xtS0c4eEREIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.-a4Lp0zFml8MGTcmCyjfK4TDlT_lF8htT3Bf5xGTkPI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Han",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "han@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
