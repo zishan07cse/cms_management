@@ -66,10 +66,12 @@ class ApiController extends Controller
     }
 
     public function update_article($id,Request $request){
+
         $validator = Validator::make($request->all(), [
             'title' => 'required',
             'content' => 'required',
             'slug'=>'required',
+            'category_id' => 'required',
             'author' => 'required',
         ]);
     
